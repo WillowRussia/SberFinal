@@ -1,8 +1,9 @@
+import 'dart:async';
 import 'package:sber_final/Navigation/nav_bar.dart';
 import 'package:sber_final/Navigation/nav_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sber_final/market/home/home_screen.dart';
-import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:sber_final/settings/settings_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -26,6 +27,7 @@ class _Mainmarkettate extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
+
     items = [
       NavModel(
         page: HomeScreen(),
@@ -40,11 +42,12 @@ class _Mainmarkettate extends State<MainScreen> {
         navKey: notificationNavKey,
       ),
       NavModel(
-        page: const TabPage(tab: 4),
+        page: const SettingsPage(),
         navKey: profileNavKey,
       ),
     ];
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +79,7 @@ class _Mainmarkettate extends State<MainScreen> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: Container(
-          margin: const EdgeInsets.only(top: 10),
+          margin: const EdgeInsets.only(top: 50),
           height: 64,
           width: 64,
           child: FloatingActionButton(

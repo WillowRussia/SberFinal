@@ -40,7 +40,7 @@ class _CartCounterState extends State<CartCounter> {
           child: Text(
             // if our item is less  then 10 then  it shows 01 02 like that
             numOfItems.toString().padLeft(2, "0"),
-            style: Theme.of(context).textTheme.titleMedium,
+            style: TextStyle(color: Colors.black),//Theme.of(context).textTheme.titleMedium,
           ),
         ),
         SizedBox(

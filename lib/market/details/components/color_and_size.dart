@@ -11,11 +11,11 @@ class ColorAndSize extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Expanded(
+        const Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text("Color"),
+              Text("Color",style: TextStyle(color: Colors.black),),
               Row(
                 children: <Widget>[
                   ColorDot(
@@ -37,13 +37,14 @@ class ColorAndSize extends StatelessWidget {
             text: TextSpan(
               style: TextStyle(color: kTextColor),
               children: [
-                TextSpan(text: "Size\n"),
+                TextSpan(text: "Size\n",style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400, fontSize: 20)),
                 TextSpan(
                   text: "${product.size} cm",
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge!
-                      .copyWith(fontWeight: FontWeight.bold),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30)
+                  // Theme.of(context)
+                  //     .textTheme
+                  //     .titleLarge!
+                  //     .copyWith(fontWeight: FontWeight.bold),
                 )
               ],
             ),
