@@ -2,6 +2,10 @@ import 'dart:async';
 import 'package:sber_final/Navigation/nav_bar.dart';
 import 'package:sber_final/Navigation/nav_model.dart';
 import 'package:flutter/material.dart';
+import 'package:sber_final/ai_screen/ai_screen.dart';
+import 'package:sber_final/category/shop.dart';
+import 'package:sber_final/credit_card/credit_card.dart';
+import 'package:sber_final/market/details/components/ar_screen.dart';
 import 'package:sber_final/market/home/home_screen.dart';
 import 'package:sber_final/settings/settings_page.dart';
 
@@ -15,7 +19,7 @@ class MainScreen extends StatefulWidget {
 class _Mainmarkettate extends State<MainScreen> {
   final homeNavKey = GlobalKey<NavigatorState>();
   final searchNavKey = GlobalKey<NavigatorState>();
-  final SelectNavKey = GlobalKey<NavigatorState>();
+  final selectNavKey = GlobalKey<NavigatorState>();
   final notificationNavKey = GlobalKey<NavigatorState>();
   final profileNavKey = GlobalKey<NavigatorState>();
 
@@ -34,11 +38,15 @@ class _Mainmarkettate extends State<MainScreen> {
         navKey: homeNavKey,
       ),
       NavModel(
-        page: const TabPage(tab: 2),
+        page: Shop(),
         navKey: searchNavKey,
       ),
       NavModel(
-        page: const TabPage(tab: 3),
+        page: AiScreen(),
+        navKey: selectNavKey,
+      ),
+      NavModel(
+        page: const MySample(),
         navKey: notificationNavKey,
       ),
       NavModel(
@@ -85,7 +93,18 @@ class _Mainmarkettate extends State<MainScreen> {
           child: FloatingActionButton(
             backgroundColor: Colors.white,
             elevation: 0,
-            onPressed: () => debugPrint("Add Button pressed"),
+            onPressed: () {
+              if (2 == selectedTab) {
+                items[2]
+                    .navKey
+                    .currentState
+                    ?.popUntil((route) => route.isFirst);
+              } else {
+                setState(() {
+                  selectedTab = 2;
+                });
+              }
+            },
             shape: RoundedRectangleBorder(
               side: const BorderSide(width: 3, color: Colors.green),
               borderRadius: BorderRadius.circular(100),
@@ -116,53 +135,7 @@ class _Mainmarkettate extends State<MainScreen> {
       ),
     );
 
-    RectTween _createRectTween(Rect begin, Rect end) {
-      return MaterialRectArcTween(begin: begin, end: end);
-    }
+
   }
 }
 
-class TabPage extends StatelessWidget {
-  final int tab;
-
-  const TabPage({Key? key, required this.tab}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Tab $tab')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Tab $tab'),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => Page(tab: tab),
-                  ),
-                );
-              },
-              child: const Text('Go to page'),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class Page extends StatelessWidget {
-  final int tab;
-
-  const Page({super.key, required this.tab});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Page Tab $tab')),
-      body: Center(child: Text('Tab $tab')),
-    );
-  }
-}

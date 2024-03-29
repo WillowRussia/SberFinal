@@ -43,6 +43,8 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
         title: 'SberShop',
         theme: isDarkMode? ThemeData.dark() : ThemeData.light(),
+
+      // themeMode: isDarkMode ? ThemeMode.dark: ThemeMode.light ,
       home: MainScreen(),
 
     );

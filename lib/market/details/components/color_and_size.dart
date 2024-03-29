@@ -15,7 +15,7 @@ class ColorAndSize extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text("Color",style: TextStyle(color: Colors.black),),
+              Text("Цвет",style: TextStyle(color: Colors.black),),
               Row(
                 children: <Widget>[
                   ColorDot(
@@ -37,9 +37,9 @@ class ColorAndSize extends StatelessWidget {
             text: TextSpan(
               style: TextStyle(color: kTextColor),
               children: [
-                TextSpan(text: "Size\n",style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400, fontSize: 20)),
+                TextSpan(text: "Размер\n",style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400, fontSize: 20)),
                 TextSpan(
-                  text: "${product.size} cm",
+                  text: "${product.size}",
                   style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30)
                   // Theme.of(context)
                   //     .textTheme

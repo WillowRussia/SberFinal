@@ -15,7 +15,7 @@ class AddToCart extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(right: kDefaultPaddin),
+            margin: const EdgeInsets.only(right: kDefaultPaddin),
             height: 50,
             width: 58,
             decoration: BoxDecoration(
@@ -42,7 +42,7 @@ class AddToCart extends StatelessWidget {
                 backgroundColor: product.color,
               ),
               child: Text(
-                "Buy  Now".toUpperCase(),
+                "Купить сейчас".toUpperCase(),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,

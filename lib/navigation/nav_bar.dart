@@ -35,20 +35,24 @@ class NavBar extends StatelessWidget {
                   onTap: () => onTap(0),
                 ),
                 navItem(
-                  Icons.message_outlined,
+                  Icons.list,
                   pageIndex == 1,
                   onTap: () => onTap(1),
                 ),
-                const SizedBox(width: 80),
                 navItem(
-                  Icons.notifications_none_outlined,
+                  Icons.add,
                   pageIndex == 2,
                   onTap: () => onTap(2),
                 ),
                 navItem(
-                  Icons.person_outline,
+                  Icons.credit_card_outlined,
                   pageIndex == 3,
                   onTap: () => onTap(3),
+                ),
+                navItem(
+                  Icons.person_outline,
+                  pageIndex == 4,
+                  onTap: () => onTap(4),
                 ),
               ],
             ),

@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: Text(
-              "Women",
+              "МегаМаркет",
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!

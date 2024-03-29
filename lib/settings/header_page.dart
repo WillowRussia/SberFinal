@@ -68,7 +68,6 @@ class _HeaderPageState extends State<HeaderPage> {
   );
 
   Widget builderProfile() {
-    bool isDarkMode = Settings.getValue<bool>(HeaderPage.keyDarkMode, defaultValue: false)!;
     return Container(
       padding: const EdgeInsets.all(8),
         child: Column(

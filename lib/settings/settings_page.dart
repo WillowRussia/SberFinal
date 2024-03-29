@@ -13,7 +13,6 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
 
-  static const keyDarkMode = 'key-dark-mode';
 
   @override
   Widget build(BuildContext context) {

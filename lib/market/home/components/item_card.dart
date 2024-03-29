@@ -25,7 +25,7 @@ class ItemCard extends StatelessWidget {
               ),
               child: Hero(
                 tag: "${product.id}",
-                child: Image.asset(product.image),
+                child: Image.asset(product.image,width: 250,),
               ),
             ),
           ),
@@ -38,7 +38,7 @@ class ItemCard extends StatelessWidget {
             ),
           ),
           Text(
-            "\$${product.price}",
+            "${product.price}₽",
             style: TextStyle(fontWeight: FontWeight.bold),
           )
         ],

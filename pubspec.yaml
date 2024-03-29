@@ -40,6 +40,8 @@ dependencies:
   permission_handler: ^11.1.0
   shared_preferences: ^2.2.2
   hive: ^2.2.3
+  model_viewer_plus: ^1.7.0
+  flutter_credit_card: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -65,12 +67,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/bag_1.png
-    - assets/images/bag_2.png
-    - assets/images/bag_3.png
-    - assets/images/bag_4.png
-    - assets/images/bag_5.png
-    - assets/images/bag_6.png
     - assets/icons/add_to_cart.svg
     - assets/icons/back.svg
     - assets/icons/bag_1.svg
@@ -78,6 +74,28 @@ flutter:
     - assets/icons/heart.svg
     - assets/icons/search.svg
     - assets/icons/sber_logo.png
+    - assets/glb/mm_shirt.glb
+    - assets/glb/orandgeva_rubashka.glb
+    - assets/glb/scremer_rubashka.glb
+    - assets/glb/shkaf.glb
+    - assets/glb/speral_rubashka.glb
+    - assets/glb/t_shirt.glb
+    - assets/glb/temnaa_kurtka.glb
+    - assets/glb/tv.glb
+    - assets/credit_card/bg-dark.png
+    - assets/credit_card/bg-light.png
+    - assets/credit_card/card_bg.png
+    - assets/credit_card/mastercard.png
+    - assets/products/orandgeva_rubashka.png
+    - assets/products/speral_rubashka.png
+    - assets/products/mm_shirt.png
+    - assets/products/scremer_rubashka.png
+    - assets/products/tv.png
+    - assets/products/shkaf.png
+    - assets/products/white.png
+    - assets/products/t_shirt.png
+    - assets/other/sber_tyn.jpg
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
